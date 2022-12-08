@@ -1,0 +1,237 @@
+:root {
+  --color-primary: #0924ad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* utiity styles */
+
+.u-margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+}
+
+.section-logIn {
+  height: 100vh;
+  padding: 5rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.row {
+  /* max-width: 114rem; */
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.row > * {
+  flex-grow: 1;
+}
+
+.logIn {
+  /* linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 50%
+    ), */
+  /* background-image: url(../image/556.jpg);
+  background-size: cover; */
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+
+  margin-left: 4rem;
+  padding: 3rem;
+  flex-basis: 20%;
+
+  object-fit: cover;
+}
+
+.logIn img {
+  width: 100%;
+}
+
+.logIn__form {
+  width: 20%;
+  padding: 6rem;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 0.3rem solid transparent;
+  display: block;
+  width: 90%;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 0.3rem solid var(--color-primary);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.3rem solid #ff7730;
+}
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4rem);
+}
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4rem;
+  transition: all 0.2s ease;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* immediate actions */
+.immediate__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+/* check box */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* browser default hide */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* custom checkbox */
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/*  add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: var(--color-primary);
+}
+
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* forgot password */
+
+.link {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+/* button login */
+.btn--login {
+  width: 90%;
+  border-radius: 3px;
+}
